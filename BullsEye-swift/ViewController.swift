@@ -17,7 +17,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        startNewRound()
+        startNewGame()
         updateLabels()
     }
 
@@ -31,16 +31,31 @@ class ViewController: UIViewController {
         let points = 100 - difference
         score += points
         
+        var title: String
+        if difference == 0 {
+            title = "Perfect! You get 100 Bonus Points!"
+            score += 100
+        } else if difference < 2 {
+            title = "So close! You get 50 Bonus Points!"
+            score += 50
+        } else if difference < 5 {
+            title = "You almost had it!"
+        } else if difference < 10 {
+            title = "Pretty good!"
+        } else {
+            title = "Not even close!"
+        }
+        
         let message = "You moved the slider to \(currentValue)." + "\nYou scored \(points) points!"
         
-        let alert = UIAlertController(title: "Hello, World", message: message, preferredStyle: .Alert)
-        let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        let action = UIAlertAction(title: "OK", style: .Default, handler: { action in
+            self.startNewRound()
+            self.updateLabels()
+            })
         
         alert.addAction(action)
         presentViewController(alert, animated: true, completion: nil)
-        
-        startNewRound()
-        updateLabels()
     }
     
     @IBAction func sliderMoved(slider: UISlider) {
@@ -63,6 +78,17 @@ class ViewController: UIViewController {
         targetLabel.text = String(targetValue)
         scoreLabel.text = String(score)
         roundLabel.text = String(round)
+    }
+    
+    func startNewGame() {
+        score = 0
+        round = 0
+        startNewRound()
+    }
+    
+    @IBAction func startOver() {
+        startNewGame()
+        updateLabels()
     }
     
 }
