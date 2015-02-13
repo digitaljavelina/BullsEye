@@ -13,6 +13,7 @@
 		992030A91A8C0D9300A60A52 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 992030A81A8C0D9300A60A52 /* Images.xcassets */; };
 		992030AC1A8C0D9300A60A52 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 992030AA1A8C0D9300A60A52 /* LaunchScreen.xib */; };
 		992030B81A8C0D9400A60A52 /* BullsEye_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992030B71A8C0D9400A60A52 /* BullsEye_swiftTests.swift */; };
+		99D7E0F01A8D749F0019E6FF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D7E0EF1A8D749F0019E6FF /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		992030B11A8C0D9400A60A52 /* BullsEye-swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BullsEye-swiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		992030B61A8C0D9400A60A52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		992030B71A8C0D9400A60A52 /* BullsEye_swiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullsEye_swiftTests.swift; sourceTree = "<group>"; };
+		99D7E0EF1A8D749F0019E6FF /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				992030A11A8C0D9300A60A52 /* AppDelegate.swift */,
 				992030A31A8C0D9300A60A52 /* ViewController.swift */,
 				992030A51A8C0D9300A60A52 /* Main.storyboard */,
+				99D7E0EF1A8D749F0019E6FF /* AboutViewController.swift */,
 				992030A81A8C0D9300A60A52 /* Images.xcassets */,
 				992030AA1A8C0D9300A60A52 /* LaunchScreen.xib */,
 				9920309F1A8C0D9300A60A52 /* Supporting Files */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99D7E0F01A8D749F0019E6FF /* AboutViewController.swift in Sources */,
 				992030A41A8C0D9300A60A52 /* ViewController.swift in Sources */,
 				992030A21A8C0D9300A60A52 /* AppDelegate.swift in Sources */,
 			);
@@ -405,6 +409,7 @@
 				992030BD1A8C0D9400A60A52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		992030BE1A8C0D9400A60A52 /* Build configuration list for PBXNativeTarget "BullsEye-swiftTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				992030C01A8C0D9400A60A52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
